@@ -1,1 +1,1 @@
-return 'xkce.core'
+return 'module xkce.core '
