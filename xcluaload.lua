@@ -1,7 +1,7 @@
 function callnext(delay, ...)if type(delay)=='number'then return synchronize(createTimer, delay,...)else return synchronize(createTimer, 1, delay, ...)end end
 function xcLuaLoad(urlBase, env)
   local pkg, inet, busy = package, getInternet()
-  local prefixXKCE, prefixUTIL = 'xkce.','xkce.util'
+  local prefixXKCE, prefixUTIL = 'xkce.','xkce.util.'
   local function doload(Name, ...)
     local cnt, timeOut, n, tn = 0, os.clock()+60.0, select('#',...), type(Name)
     if tn=='table'then
