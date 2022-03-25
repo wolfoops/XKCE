@@ -1,5 +1,5 @@
 function callnext(delay, ...)if type(delay)=='number'then return synchronize(createTimer, delay,...)else return synchronize(createTimer, 1, delay, ...)end end
-function LuaLoad(urlBase, env)
+function xcLuaLoad(urlBase, env)
   local pkg, inet, busy = package, getInternet()
   local prefixXKCE, prefixUTIL = 'xkce.','xkce.util'
   local function doload(Name, ...)
@@ -62,3 +62,4 @@ function LuaLoad(urlBase, env)
 
   return doload
 end -- LuaLoad
+if not LuaLoad then LuaLoad = xcLuaLoad end
