@@ -54,4 +54,5 @@ local function tableFileWebSearcher(...)
 end
 ---
 local pkg_myloader_position = 1+#package.searchers
-return function(...)package.searchers[pkg_myloader_position] = tableFileWebSearcher(...)end
+local function setRoots(...)package.searchers[pkg_myloader_position] = tableFileWebSearcher(...) return setRoots end
+return setRoots
