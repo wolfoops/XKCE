@@ -32,7 +32,7 @@ local function tableFileWebSearcher(...)
             if tf then tf.Stream.writeAnsiString(r); break end
           end
         end
-        if tf then break end
+        if tf then print(mod,'load from web ',url) break end
       end
     else
       r = tf.Stream.readAnsiString()
