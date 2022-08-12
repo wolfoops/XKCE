@@ -28,5 +28,5 @@ do
     end
     miCompactXX = mi
   end
- 
+  return function()miCompactXX.OnClick(miCompactXX)end
 end
