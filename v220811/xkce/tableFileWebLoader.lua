@@ -1,7 +1,7 @@
 ----
 local function getWebFile(url)
-  local inet, r = getInternet()
-  if inet and url then
+  if type(url)=='string'then
+    local inet, r = getInternet()
     r = inet.getURL(url), inet.Destroy()
     if type(r)~='string' or r:find'^%d+'then
       return nil, r and tostring(r)or 'unknown error'
