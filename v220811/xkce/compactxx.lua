@@ -1,5 +1,6 @@
 --
 do
+  if not miCompactXX then
   local mf,pvh = MainForm
   local now, stats = 2,{' Mini  ','Restore','Compact',}
   local function compactxxMode()
@@ -16,7 +17,6 @@ do
      end
   end
 
-  if not miCompactXX then
     local root = getMainForm().Menu.Items
     local mi = createMenuItem(root)
     root.add(mi)
