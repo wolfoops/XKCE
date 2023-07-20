@@ -1,0 +1,2 @@
+print('>>',...)
+return '@xk.vargs'
